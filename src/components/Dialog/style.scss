@@ -1,0 +1,70 @@
+
+@import '@/assets/css/_var.scss';
+
+//页面黄色
+$g-yellow: $ct-yellow;
+//页面黑色
+$g-black: #000 !default;
+// 白色
+$g-white: #FFF !default;
+//hover页面黄色
+.v-modal {
+    background: #000;
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.ct-model-wrapper{
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    overflow: auto;
+    position: fixed;
+    right: -17px;
+    top: 0;
+}
+.ct-modal{
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    margin: 0 auto 50px;
+    position: relative;
+    top: 30%;
+    width: 50%;
+    .ct-model-header{       
+        padding: 20px 20px 10px;
+        color: #303133;
+        font-size: 18px;
+        min-height: 18px;
+        line-height: 24px;
+        position: relative;
+        .ct-model-header-title {
+            font-weight: 400;
+        }
+        .ct-model-header-close{
+            cursor: pointer;
+            text-decoration: none;              
+            font-weight: 200;
+            position: absolute;
+            right:20px;
+            top:20px;
+        }
+        
+    }
+    .ct-model-body{
+        padding: 0 30px;
+        color: #606266;
+        font-size: 14px;
+    }
+
+    .ct-model-footer{     
+        text-align: right;
+        margin:0 20px;
+        padding-top:-40px;
+        padding-bottom: 20px;
+    }
+}

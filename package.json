@@ -1,0 +1,42 @@
+{
+  "name": "ctcloud-share-ui",
+  "version": "1.0.4",
+  "author": "linry@chinatelecom.cn",
+  "description": "天翼云公共组件",
+  "main": "./dist/ctcloud-share-ui.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "make-lib": "vue-cli-service build --target lib --name ctcloud-share-ui  src/main.js"
+  },
+  "dependencies": {
+    "alogic-http": "^0.1.13",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files": [
+    "dist"
+  ]
+}

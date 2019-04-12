@@ -67,7 +67,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../_var.scss';
-$ad-whole-width:152;
+$ad-whole-width:200;
 .ct-asider-ad{
     margin-top: #{$margin-top}px;
     position: relative;

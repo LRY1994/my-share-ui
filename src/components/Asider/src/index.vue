@@ -23,7 +23,7 @@
     </div>
 </template>
 
-<script type="text/babel">
+<script >
 import Helper from './Helper/index.vue';
 import Advertise from './Advertise/index.vue';
 import { SELECTOR$ } from '@/main.js';
@@ -49,7 +49,7 @@ export default {
     gotoTop() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-      if( this.EL$) EL$.scrollTop = 0;
+      if( this.EL$) this.EL$.scrollTop = 0;
     },
     calcGotoTopHidden() {
        let scrollTop;

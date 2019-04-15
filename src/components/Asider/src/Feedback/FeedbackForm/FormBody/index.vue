@@ -195,12 +195,13 @@ export default {
       }
     },
    //检查是否都保存了
-   beforeSubmit(val){
+   beforeSubmit(){
      let str="";
      this.savedInfo.forEach((item)=>{
        if(item.editor!=='filelist'){
-          if(item.value !== this.params.value){
-             str += `${item.worksheetInfoId},${this.params.value};`;
+         const nowVal = this.params[item.property];
+          if(nowVal!=='' && item.value !== nowVal){
+             str += `${item.worksheetInfoId},${nowVal};`;
           }
        }      
      });

@@ -48,12 +48,6 @@ export default {
           default:2000
         }
     },
-    data(){
-      return{
-          maxH: window.innerHeight-30,
-          top_copy:this.top
-      }
-    },
   methods: {
     close() {
       this.$emit('before-close');

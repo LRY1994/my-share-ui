@@ -5,13 +5,13 @@ import CtAsider from './components/Asider/index';
 import CtBanner from './components/Banner/index';
 import Message from '@/components/Message/index.js'
 import '@/assets/css/icon.css';
+import Feedback from '@/components/Asider/src/Feedback/feedback.js';
 
 let instance = alogic_http.instance;
 instance.init({ service :HTTP.SERVICE });
 instance.generateServiceFactory();
-
 const HTTP$ = instance.serviceHooks;
-let SELECTOR$= null ;
+
 
 Vue.prototype.$ctmessage = Message;
 
@@ -20,6 +20,7 @@ const components = [
   CtBanner,
 ];
 
+let SELECTOR$= null ;
 const install = function (Vue,options) {
   if(options && options.container){  
     SELECTOR$ = options.container ; 
@@ -27,9 +28,9 @@ const install = function (Vue,options) {
   components.map(component => Vue.component(component.name, component));
 };
 export { HTTP$ ,SELECTOR$};
+
+
 export default {
   install,
-  SERVICE:HTTP.SERVICE,
-  CtAsider,
-  CtBanner,
+  Feedback
 };

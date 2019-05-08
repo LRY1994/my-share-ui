@@ -3,6 +3,13 @@
 <ct-asider></ct-asider>
 </div>
 </template>
+<script>
+import Feedback from '@/components/Asider/src/Feedback/main.js';
+// console.log(Feedback);
+export default {
+    
+}
+</script>
 <style lang="scss">
 @import '../src/assets/css/icon.css';
 </style>

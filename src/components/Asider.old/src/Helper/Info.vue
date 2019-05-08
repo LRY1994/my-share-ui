@@ -31,7 +31,7 @@
   </div>
 </template>
 <script >
-import Feedback from '../Feedback/feedback.js';
+import Feedback from '../Feedback/main.js';
 export default {
   methods: {
     mounteFeedback(){

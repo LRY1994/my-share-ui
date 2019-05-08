@@ -31,7 +31,7 @@ const parseResponse = (list) => {
   return result;
 };
 
-import { HTTP$ } from '@/main.js'
+import { HTTP$ } from '@/http.js'
 
 export default {
   data() {

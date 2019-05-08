@@ -19,7 +19,7 @@
 
 <script>
 import FeedbackForm from './FeedbackForm/index.vue';
-import Feedback from './feedback.js';
+import Feedback from './main.js';
 import NotLogin from './NotLogin.vue';
 export default {
   props:['http$'],

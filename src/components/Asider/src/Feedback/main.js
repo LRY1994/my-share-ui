@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { HTTP$ } from '@/main.js'
+import { HTTP$ } from '@/http.js'
 import feedbackVue from './index.vue';
 let instance;
 

@@ -21,12 +21,11 @@ const install = function (Vue,options) {
   }
   components.map(component => Vue.component(component.name, component));
 };
-export { SELECTOR$};
+export { 
+  SELECTOR$,
+  Feedback
+};
 
-
-
-console.log(Feedback);
 export default {
   install,
-  Feedback
 };

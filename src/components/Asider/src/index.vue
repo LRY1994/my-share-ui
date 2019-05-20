@@ -80,7 +80,6 @@ export default {
     right: #{$sticky-right}px;
     top: 0px;
     width: #{$asider-width}px;
-    height: 100%;
     z-index: 20;
     .ct-asider-wrap{
       position: fixed;

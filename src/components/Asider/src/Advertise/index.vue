@@ -72,12 +72,11 @@ $ad-whole-width:200;
     margin-top: #{$margin-top}px;
     position: relative;
     height:#{$ad-height}px;
-    box-shadow: 0px 8px 18px 1.44px rgba(0, 0, 0, 0.1);
+    
     
     .ad-thumbnail{
       width:#{$asider-width}px;
       height:#{$ad-height}px;
-      background: #fff;
       position: absolute;
       right: 0;
       img{

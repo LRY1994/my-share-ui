@@ -9,7 +9,7 @@
         <div class="desc highlight">400-810-9889</div>
       </div>
     </div>
-    <div class="icon-tip" @click="goTo('/ctyun/aiocc-ocs',true)">
+    <!-- <div class="icon-tip" @click="goTo('/ctyun/aiocc-ocs',true)">
        <div class="img-block">
         <img src="@/assets/img/asider/service.png">
       </div>
@@ -18,7 +18,7 @@
         <div class="desc">7*24小时不间断售后保障</div>
       </div>
 
-    </div>
+    </div> -->
     <div class="icon-tip" @click="mounteFeedback">
       <div class="img-block">
         <img src="@/assets/img/asider/advice.png">
@@ -53,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/css/_var.scss';
 .info-wrapper {
-  padding: 16px;
+  padding:20px  16px;
   color: #2f2f2f;
   line-height: 16px;
 
@@ -65,6 +65,7 @@ export default {
 
   .icon-tip {
     margin-top: 20px;
+    &:first-of-type{ margin-top:0;}
     white-space: nowrap;
     &:hover {
         color: $ct-yellow;

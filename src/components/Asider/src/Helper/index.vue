@@ -3,7 +3,7 @@
         <div class="img">
           <img src="@/assets/img/asider/feedback.png">
         </div>
-        <div class="desc">服务<span class="dot"></span>建议</div>
+         <div class="desc">服务<span class="dot"></span>建议</div>
         <div class="info-panel-wrapper">
           <div class="info-panel">
             <info></info>
@@ -70,11 +70,11 @@ export default {
 
     .info-panel-wrapper {
       width: 306px;
-      height: 220px;
       position: absolute;
       right: 48px;
       padding-right: 20px;
-      top: #{($helper-height + $margin-top + $asider-width) / 2 - 289/2}px;
+      // top: #{($helper-height + $margin-top + $asider-width) / 2 - 289/2}px;
+      top:0;
       transition: visibility 0s, opacity 0.2s ease-in-out;
       opacity: 0;
       z-index: -1;
@@ -84,7 +84,6 @@ export default {
         background-color: #fff;
         box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.1);
         width: 100%;
-        height: 100%;
       }
     }
 

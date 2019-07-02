@@ -1,11 +1,9 @@
-/**
-* @author: linruiyu;
-* @date: 2019-3-14;
-* @description: 幻灯片容器
-*/
+/** 
+in-active : z-index: -1;
+active    : z-index: 8;
+ */
 <template>
-  <div class="carousel-list" ref="wrapper"
-    :style="{height: bannerHeight+'px'}">
+  <div class="carousel-list" ref="wrapper">
     <div class="carousel-item"
     v-for="(item,index) in bannerList"
     :key="index"
@@ -22,9 +20,6 @@ import CarouselItem from './CarouselItem.vue';
 
 export default {
   props: {
-    bannerHeight: {
-      type: Number,
-    },
     bannerList: {
       type: Array,
     },
@@ -56,12 +51,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 .carousel-list{
   position: relative;
   text-align: center;
   width: 100%;
+  height: 100%;
   .carousel-item {
     position: absolute;
     width: 100%;

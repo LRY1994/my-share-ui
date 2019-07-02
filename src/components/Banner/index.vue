@@ -1,12 +1,11 @@
 /**
 * @author: linruiyu;
-* @date: 2019-3-14;
-* @description: 幻灯片
+* @date: 2019-3-2;
+* @description: banner
 */
 <template>
-  <div class="carousel" >
+  <div class="ct-carousel" >
     <carousel ref="carousel"
-      :banner-height="bannerHeight"
       :banner-list="bannerList"
       @handleMouseover="handleMouseover"
       @handleMouseout="handleMouseout"
@@ -14,9 +13,9 @@
     </carousel>
     <!--多于1个才显示圆圈-->
     <indicator ref="indicator"
-      v-if="bannerList.length>1"
+      v-if="bannerList.length > 1"
       :length="bannerList.length"
-      :increment="increment"
+      :timeout="timeout"
       @change="handleIndicatorChange"
       @next="handleIndicatorNext">
     </indicator>
@@ -25,38 +24,32 @@
 </template>
 
 <script type="text/javascript">
-import Indicator from './Indicator.vue';
 import Carousel from './Carousel.vue';
 
 export default {
-  name: 'CtBanner',
   props: {
-    bannerHeight: {
+    timeout: {
       type: Number,
-      default: () => 560,
-    },
-    increment: {
-      type: Number,
-      default: () => 1.5,
+      default: () => 8,
     },
     bannerList: {
       type: Array,
-      required: true,
     },
   },
   components: {
-    Indicator, Carousel,
+    Carousel,
+    Indicator:()=>import('./Indicator.vue')
   },
 
   methods: {
     // 鼠标移入，暂停
     handleMouseover() {
-      if (this.bannerList.length === 0) return;
+      if (this.bannerList.length===0) return;
       if (this.$refs.indicator) this.$refs.indicator.pause();
     },
     // 鼠标移出，继续
     handleMouseout() {
-      if (this.bannerList.length === 0) return;
+      if (this.bannerList.length===0) return;
       if (this.$refs.indicator) this.$refs.indicator.resume();
     },
     // 点击圆圈切换对应的幻灯片
@@ -71,8 +64,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.carousel{
+<style lang="scss" >
+.ct-carousel{
   position: relative;
 }
 </style>

@@ -5,7 +5,7 @@
 </template>
 <script>
 import Feedback from '@/components/Asider/src/Feedback/main.js';
-// console.log(Feedback);
+
 export default {
     
 }

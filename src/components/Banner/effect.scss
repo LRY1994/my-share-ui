@@ -1,0 +1,54 @@
+//从右往左
+@mixin slide-left-to-right(){
+    animation: left-to-right 1s ease;
+ }
+ @keyframes left-to-right {
+     0% {
+         opacity: 0;
+         transform: translate3d(20px,0,0);
+     }
+ 
+     to {
+         opacity: 1;
+         transform: translate3d(0,0,0);
+     }
+ }
+
+ //从下往上
+ @mixin slide-bottom-to-up(){
+    animation: bottom-to-up  1s ease;
+ }
+
+ @keyframes bottom-to-up {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,100px,0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+//动图
+@mixin gif($duration:2s){
+    .light-img{
+        animation: lightning $duration ease  infinite $duration/2 alternate;
+    }
+ }
+
+ @keyframes lightning {
+    0% {  opacity: 0; }
+    to {  opacity: 1; }
+}
+
+@mixin background-center{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+}

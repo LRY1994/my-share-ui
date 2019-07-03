@@ -17,6 +17,7 @@
 
      <ct-dialog title="图片预览" v-show="previewing"
      width="600px"
+     top="5%"
      @before-close="previewing = false">
       <div class="preview-body">
         <img :src="previewingURL"/>

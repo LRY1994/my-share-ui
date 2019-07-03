@@ -1,10 +1,7 @@
 <template>
 <div>
 <div class="ct-model-wrapper" :style=" { 'z-index': innerZindex}">
-    <div class="ct-modal" :style="{ width: width ,
-                                    top:top!== undefined ? top:'50%',
-                                    transform:top === undefined?'translateY(-50%)':''
-                                  }">
+    <div class="ct-modal" :style="{ width: width  }">
         <div class="ct-model-header"> 
 
             <span v-if ="title" class="ct-model-header-title">{{title}}</span>  
@@ -55,12 +52,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import './style.scss';
-.top-50{
-  top: 50%;
-  transform: translate(-50% -50%)
-}
-
-</style>

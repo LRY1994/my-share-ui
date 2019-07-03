@@ -17,7 +17,6 @@
 
      <ct-dialog title="图片预览" v-show="previewing"
      width="600px"
-     top="5%"
      @before-close="previewing = false">
       <div class="preview-body">
         <img :src="previewingURL"/>
@@ -126,11 +125,14 @@ ul{
 }
 .preview-body{
   width:100%;
-  min-height: 200px;
+  height: 400px;
   text-align: center;
   img{
     max-height:100%;
-    max-width:100%
+    max-width:100%;
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
   }
 
 }
